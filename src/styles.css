@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+.hvr-grow-shadow {
+    /* Border Stuff here, example:
+     * border: 1px solid black;
+     */
+    box-sizing: border-box;
+}
+
+.p.solid {
+    border-style: solid;
+}
+
+.char ul {
+    list-style-type: none;
+    margin-left: 10px;
+}

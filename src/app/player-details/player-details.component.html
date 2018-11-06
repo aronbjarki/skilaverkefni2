@@ -1,0 +1,23 @@
+<div *ngIf="playerService.selectedPlayer">
+        <h2>{{playerService.selectedPlayer.name}}</h2>
+        <h3>{{playerService.selectedPlayer.cost}}</h3>
+        <div *ngIf="squadService.isPlayerInSquad(playerService.selectedPlayer)">
+            <button class="btn btn-danger" (click)="sellPlayer(playerService.selectedPlayer)">Sell</button>
+        </div>
+        <div *ngIf="!squadService.isPlayerInSquad(playerService.selectedPlayer)">
+                <button class="btn btn-success" (click)="buyPlayer(playerService.selectedPlayer)">Buy</button>
+        </div>
+
+        <div *ngIf="!squadService.isPlayerInSquad(playerService.selectedPlayer)">
+                <button class="btn btn-danger" (click)="deletePlayer(playerService.selectedPlayer)">Delete</button>
+        </div>
+      
+        <div *ngIf="triggerMessage">
+        <h3>You need to sign in before you can buy players</h3>
+        <button class="btn btn-primary" (click)="triggerMessage=false">Ok</button>
+
+
+              <!-- <app-simple-dialog></app-simple-dialog> -->
+        </div>
+
+</div>

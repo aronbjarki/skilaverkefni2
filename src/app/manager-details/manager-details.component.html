@@ -1,0 +1,26 @@
+<div class="body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6" *ngIf="isManagerInfoSubmitted">
+          <br>
+          <h2>Team and manager information</h2>
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">M</span>
+              </div>
+              <input [(ngModel)]="squadService.manager" type="text" class="form-control" placeholder="Manager name" aria-label="manager" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">T</span>
+                </div>
+                <input [(ngModel)]="squadService.teamName" type="text" class="form-control" placeholder="Team name" aria-label="teamname" aria-describedby="basic-addon1">
+                <button (click)="updateManagerInfo()">Save</button>
+            </div>
+      </div>
+      <div *ngIf="!isManagerInfoSubmitted">
+        <h2>Manager: {{squadService.manager}} - Team: {{squadService.teamName}}</h2>
+      </div>
+    </div>
+  </div>  
+</div>

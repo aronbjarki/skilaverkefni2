@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let player of playerList" (click)="selectPlayer(player)" 
+  [class.playerSelected]="playerService.selectedPlayer  === player">
+    {{player.name}}
+  </li>
+</ul>

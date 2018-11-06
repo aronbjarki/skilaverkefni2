@@ -1,0 +1,50 @@
+<div *ngIf="playerAdded">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">ID</span>
+      <input [(ngModel)]="player.id" type="text" class="form-control" placeholder="ID" aria-label="Id" aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Name</span>
+        <input [(ngModel)]="player.Name" type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1">
+      </div>
+
+      <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Price</span>
+          <input [(ngModel)]="player.Price" type="text" class="form-control" placeholder="Price" aria-label="Price" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Age</span>
+            <input [(ngModel)]="player.Age" type="text" class="form-control" placeholder="Age" aria-label="Age" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Position</span>
+              <input [(ngModel)]="player.Position" type="text" class="form-control" placeholder="Position" aria-label="Position" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Salary</span>
+                <input [(ngModel)]="player.Salary" type="text" class="form-control" placeholder="Salary" aria-label="Salary" aria-describedby="basic-addon1">
+              </div>
+
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Squad</span>
+                  <input [(ngModel)]="player.Squad" type="text" class="form-control" placeholder="Squad" aria-label="Squad" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Rating</span>
+                    <input [(ngModel)]="player.Rating" type="text" class="form-control" placeholder="Rating" aria-label="Rating" aria-describedby="basic-addon1">
+                  </div>
+
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Nationality</span>
+                      <input [(ngModel)]="player.Nationality" type="text" class="form-control" placeholder="Nationality" aria-label="Nationality" aria-describedby="basic-addon1">
+                    </div>
+                    
+                    <button class="btn btn-success" (click)="addPlayer()">Save</button>
+</div>
+
+<div *ngIf="!playerAdded"></div>

@@ -1,0 +1,7 @@
+<div *ngIf="squadService.squadList">
+  <ul>
+    <li *ngFor="let squadPlayer of squadService.squadList" (click)="selectPlayer(squadPlayer)" routerLink="/detail/{{squadPlayer.id}}">
+      {{squadPlayer.name}}
+    </li>
+  </ul>
+</div>
